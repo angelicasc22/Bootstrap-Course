@@ -60,9 +60,12 @@
               experience. Our lipsmacking creations will tickle your culinary senses!
             </p>
           </div>
-          <div class="col-12 col-sm align-self-center text-center">
+          <div class="col-12 col-sm-3 align-self-center">
             <!-- align-self-center centra verticalmente; text-center centra horizontalmente-->
             <img src="img/logo.png" class="img-fluid" />
+          </div>
+          <div class="col-12 col-sm-3 align-self-center">
+            <a role="button" class="btn btn-warning" href="#reserve_table">Reserve Table</a>
           </div>
         </div>
       </div>
@@ -74,14 +77,19 @@
           <h3>Our Lipsmacking Culinary Creations</h3>
         </div>
         <div class="col col-sm order-sm-first col-md">
-          <div class="media d-flex">
+          <div class="d-flex">
+            <!-- v4:<div class="media"> -->
             <img
-              class="d-flex mr-3 img-thumbnail align-self-center"
+              class="flex-shrink-0 img-thumbnail align-self-center"
               src="img/uthappizza.png"
               alt="Uthappizza"
             />
-            <div class="media-body">
-              <h2 class="mt-0">Uthappizza <span class="badge text-bg-danger mx-2">HOT</span><span class="badge rounded-pill bg-secondary">$4.99</span></h2>
+            <div class="flex-grow-1 ms-3">
+              <!-- v4:<div class="media-body"> -->
+              <h2 class="mt-0">
+                Uthappizza <span class="badge text-bg-danger mx-2">HOT</span
+                ><span class="badge rounded-pill bg-secondary">$4.99</span>
+              </h2>
               <p class="d-none d-sm-block">
                 A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with
                 Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and
@@ -96,13 +104,17 @@
         <div class="col-12 col-sm-4 col-md-3">
           <h3>This Month's Promotions</h3>
         </div>
-        <div class="col col-sm col-md">
-          <h2>Weekend Grand Buffet</h2>
-          <p class="d-none d-sm-block">
-            Featuring mouthwatering combinations with a choice of five different salads, six
-            enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly
-            and soft drinks. All for just $19.99 per person
-          </p>
+        <div class="col col-sm col-md"> 
+            <div class="d-flex">  <!-- v4:<div class="media"> -->
+                <div class="flex-grow-1 ms-3"> <!-- v4:<div class="media-body"> -->
+                    <h2 class="mt-0">Weekend Grand Buffet<span class="badge bg-danger mx-2">NEW</span></h2>
+                    <p class="d-none d-sm-block">
+                        Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person
+                    </p>
+                </div> 
+                <img class="flex-shrink-0 img-thumbnail align-self-center" src="img/buffet.png" alt="Buffet">
+            </div>
+          
         </div>
       </div>
 
@@ -111,13 +123,16 @@
           <h3>Meet our Culinary Specialists</h3>
         </div>
         <div class="col col-sm order-sm-first col-md">
-          <div class="media d-flex">
+          <div class="d-flex">
+            <!-- v4:<div class="media"> -->
             <img
-              class="d-flex mr-3 img-thumbnail align-self-center"
+              class="flex-shrink-0 img-thumbnail align-self-center"
               src="img/alberto.png"
               alt="Alberto Somayya"
             />
-            <div class="media-body">
+            <!-- v4:<img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png" alt="Alberto Somayya"> -->
+            <div class="flex-grow-1 ms-3">
+              <!-- v4:<div class="media-body"> -->
               <h2 class="mt-0">Alberto Somayya</h2>
               <h4>Executive Chef</h4>
               <p class="d-none d-sm-block">
@@ -126,6 +141,102 @@
                 mouthwatering Indo-Italian fusion experiences.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-content align-items-center justify-content-center">
+      <div class="col-12 col-sm-8">
+        <div class="card">
+          <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+          <div class="card-body">
+            <form id="reserve_table">
+              <div class="form-group row">
+                <label for="n_guests" class="col-md-2 col-form-label">Number of Guests</label>
+                <div class="col-md-10">
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="n_guests"
+                      id="1_guest"
+                      value="1_guest"
+                    />
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="n_guests"
+                      id="2_guests"
+                      value="2_guests"
+                    />
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="n_guests"
+                      id="3_guests"
+                      value="3_guests"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="n_guests"
+                      id="4_guests"
+                      value="4_guests"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="n_guests" id=5_guests"
+                    value="5_guests" />
+                    <label class="form-check-label" for="inlineRadio3">5</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="n_guests"
+                      id="6_guests"
+                      value="6_guests"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">6</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="date" class="col-md-2 col-form-label">Date and Time</label>
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="date"
+                    name="date"
+                    placeholder="Date"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="time"
+                    name="time"
+                    placeholder="Time"
+                  />
+                </div>
+              </div>
+              <div class="offset-md-2 col-md-10 mt-2">
+                <button type="submit" class="btn btn-primary">Reserve</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
