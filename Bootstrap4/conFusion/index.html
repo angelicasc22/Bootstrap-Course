@@ -47,9 +47,65 @@
               >
             </li>
           </ul>
+          <span class="navbar-text">
+            <a data-bs-toggle="modal" data-bs-target="#loginModal">
+              <span class="fa fa-sign-in"></span> Login
+            </a>
+          </span>
         </div>
       </div>
     </nav>
+    <div id="loginModal" class="modal fade" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content" role="content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="col-sm-4">
+                  <label class="sr-only" for="exampleInputEmail3">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control form-control-sm mr-1"
+                    id="exampleInputEmail3"
+                    placeholder="Enter email"
+                  />
+                </div>
+                <div class="col-sm-4">
+                  <label class="sr-only" for="exampleInputPassword3">Password</label>
+                  <input
+                    type="password"
+                    class="form-control form-control-sm mr-1"
+                    id="exampleInputPassword3"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="col-sm-auto">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rememberMe" />
+                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="text-end">
+                  <button type="button" class="btn btn-secondary btn-sm ml-auto" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                  <button type="submit" class="btn btn-primary btn-sm ml-auto">Sign in</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <header class="jumbotron">
       <div class="container">
         <div class="row row-header">
@@ -65,7 +121,16 @@
             <img src="img/logo.png" class="img-fluid" />
           </div>
           <div class="col-12 col-sm-3 align-self-center">
-            <a role="button" class="btn btn-warning" href="#reserve_table">Reserve Table</a>
+            <a
+              role="button"
+              class="btn btn-warning"
+              data-bs-toggle="tooltip"
+              data-html="true"
+              title="Or Call us at <br><strong>+852 12345678</strong>"
+              data-bs-placement="bottom"
+              href="#reserve_table"
+              >Reserve Table</a
+            >
           </div>
         </div>
       </div>
@@ -104,17 +169,26 @@
         <div class="col-12 col-sm-4 col-md-3">
           <h3>This Month's Promotions</h3>
         </div>
-        <div class="col col-sm col-md"> 
-            <div class="d-flex">  <!-- v4:<div class="media"> -->
-                <div class="flex-grow-1 ms-3"> <!-- v4:<div class="media-body"> -->
-                    <h2 class="mt-0">Weekend Grand Buffet<span class="badge bg-danger mx-2">NEW</span></h2>
-                    <p class="d-none d-sm-block">
-                        Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person
-                    </p>
-                </div> 
-                <img class="flex-shrink-0 img-thumbnail align-self-center" src="img/buffet.png" alt="Buffet">
+        <div class="col col-sm col-md">
+          <div class="d-flex">
+            <!-- v4:<div class="media"> -->
+            <div class="flex-grow-1 ms-3">
+              <!-- v4:<div class="media-body"> -->
+              <h2 class="mt-0">
+                Weekend Grand Buffet<span class="badge bg-danger mx-2">NEW</span>
+              </h2>
+              <p class="d-none d-sm-block">
+                Featuring mouthwatering combinations with a choice of five different salads, six
+                enticing appetizers, six main entrees and five choicest desserts. Free flowing
+                bubbly and soft drinks. All for just $19.99 per person
+              </p>
             </div>
-          
+            <img
+              class="flex-shrink-0 img-thumbnail align-self-center"
+              src="img/buffet.png"
+              alt="Buffet"
+            />
+          </div>
         </div>
       </div>
 
@@ -301,6 +375,11 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('[data-bs-toggle="tooltip"]').tooltip()
+      })
+    </script>
   </body>
 </html>
