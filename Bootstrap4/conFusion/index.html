@@ -5,13 +5,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Ristorante Con Fusion</title>
+    <!-- endbuild -->
   </head>
 
   <body>
@@ -206,7 +207,7 @@
                     <label class="form-check-label" for="inlineRadio3">4</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="n_guests" id=5_guests"
+                    <input class="form-check-input" type="radio" name="n_guests" id="5_guests"
                     value="5_guests" />
                     <label class="form-check-label" for="inlineRadio3">5</label>
                   </div>
@@ -517,10 +518,14 @@
       </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    
     <!--script>
       $(document).ready(function () {
         $('[data-bs-toggle="tooltip"]').tooltip()
